@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+
+<div class="container  p-5">
+    <h1 class="text-center fw-bold mb-2">{{post.title}}</h1>
+    <p class="text-center">{{post.publicationdate}}</p>
+    <img src="{{post.image.url}}" class="img-fluid mt-3 mb-4 m-0 img-thumbnail" style="height:350px; width:100%;" alt="">
+    
+    
+    <p>{{post.content|safe}}</p>
+    
+</div>
+ 
+
+
+{% endblock content %}

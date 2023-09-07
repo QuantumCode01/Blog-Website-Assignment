@@ -1,0 +1,52 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+                           <!-- this template is to show the posts created by user, only user can see these posts -->
+<h3 class="font my-5" style="color:orangered;">
+    Your Posts
+</h3>
+
+<div class="row justify-content-center">
+    <div class="col-6 text-center mb-2 ">
+    {% if messages %}
+       {% for message in messages %}
+       <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+             <strong>{{message}}.</strong>
+             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+       {% endfor %}
+    {% endif %}
+    </div>
+</div>
+
+   
+
+
+<!-- then we use for loop to show the details of post  -->
+<div class="jumbotron jumbotron-fluid jumbo-class  p-3 mb-3">
+    <div class="container">
+        <div class="postrow row justify-content-start p-4">
+            {% for pt in post %}
+
+                    <div class="col-md-4 mt-5">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{pt.image.url}}" class="card-img-top img-fluid" style="width:18rem; height:12rem;" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{pt.title}}</h5>
+                              <p class="card-text postname lh-1">{{pt.publicationdate|date:"D, M j"}}</p>
+                              
+                              <!-- link to see post details -->
+                              <a href="{% url 'postdetails' pt.id %}" class="btn btn-primary">Read More..</a>
+                            </div>
+                        </div>
+                         
+                       
+                          
+                    </div>    
+                     {% endfor %}
+        </div>
+    </div>
+</div><br>
+
+
+{% endblock content %}

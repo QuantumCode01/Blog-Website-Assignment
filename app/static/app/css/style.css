@@ -1,0 +1,62 @@
+.navbar{
+    background-color: rgba(235, 62, 62, 0)!important;
+    opacity:1;
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar-brand.nav-link,.crt-post,.text-success{
+    color:#f05537!important;
+}
+.nav-link{
+    color:#39364f!important;
+}
+.login-tag, .fw-bold{
+    font-size: 3.25rem;
+    line-height: 3rem;
+}
+.d-grid .btn{
+    background-color: #f05537!important;
+    border:none;
+}
+.loginimage{
+    background-image: url("{% static 'app/images/loginimage.jpg' %}");
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: 'Poppins', serif;
+}
+.postname{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    letter-spacing: .25px;
+    margin-right: -0.25px;
+    font-weight: 600;
+}
+.postdate,.postcontent{
+    font-size: .875rem;
+    line-height: 1.00rem;
+}
+
+
+body{
+    /* applying Poppins font to all texts */
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.postrow{
+
+    border-radius: 10px;
+
+    border:1px solid black;
+    
+
+}
+.postrow.card{
+    flex: 1;
+    margin:10px;
+}
+
